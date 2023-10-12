@@ -17,3 +17,8 @@ runs:
       shell: bash
       run: |
         cp -r configs/* $GITHUB_WORKSPACE/
+
+    - name: ls
+      shell: bash
+      run: |
+        ls -l $GITHUB_WORKSPACE/
