@@ -1,0 +1,18 @@
+---
+name: Load TFLint Configs
+description: |
+  Load TFLint Configs
+
+runs:
+  using: "composite"
+  steps:
+
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+      with:
+        repository: akitok/sample-files
+        ref: main
+
+    - name: Copy TFLint OPA Policies
+      run: |
+        cp -r configs/* $GITHUB_WORKSPACE/
