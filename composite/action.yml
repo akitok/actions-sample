@@ -14,5 +14,6 @@ runs:
         ref: main
 
     - name: Copy TFLint OPA Policies
+      shell: bash
       run: |
         cp -r configs/* $GITHUB_WORKSPACE/
